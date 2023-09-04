@@ -8,10 +8,7 @@ Introducing the **dataset** concept in which is an object in each HTML element w
 
 example:
 ```HTML
-<div data-key="65" class="key">
-  <kbd>A</kbd>
-  <span class="sound">clap</span>
-</div>
+<audio data-key="65" src="sounds/clap.wav"></audio>
 ```
 Accesing the data object in javascript:
 ```JS
