@@ -13,8 +13,8 @@ Example:
 Accesing the data object in javascript:
 ```JS
 /* select the element by the key variable */
-const element = document.querySelector('audio[data-key="65"]') ;
-console.log(element.dataset.key) ; /* 65 */
+const element = document.querySelector('audio[data-key="65"]');
+console.log(element.dataset.key); /* 65 */
 ```
 
 ## Day 2
@@ -32,7 +32,7 @@ setInterval(setDate, 1000);
 Task: Changing color, blur, padding using the HTML input elements 
 
 Introducing **variables in CSS**.
-example:
+Example:
 ```css
 /* initialize variable */
 :root{
@@ -47,5 +47,26 @@ img{
 
 Update variable using javascript:
 ```JS
-document.documentElement.style.setProperty("--blur","20px") ;
+document.documentElement.style.setProperty("--blur","20px");
+```
+
+## Day 4
+Task: Train using some javascript built-in functions
+
+Introducing **console.table()** to print array of objects as a table in the console.
+Example:
+```JS
+console.table(arr);
+```
+
+How to group elements by frequency in javascript?
+```JS
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+const arr = data.reduce( (prev,e)=>{
+  if ( !prev[e] )
+    prev[e] = 0 ;
+  prev[e]++ ;
+  return prev ;
+}, {});
+console.log(arr); /* Object { car: 5, truck: 3, bike: 2, walk: 2, van: 2 } */
 ```
